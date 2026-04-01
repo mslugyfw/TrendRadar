@@ -78,7 +78,7 @@ jobs:
           if [ -n "$FIRST_RUN_DATE" ]; then
             CURRENT_TIMESTAMP=$(date +%s)
             FIRST_RUN_TIMESTAMP=$(date -d "$FIRST_RUN_DATE" +%s)
-            DIFF_SECONDS=$((CURRENT_TIMESTAMP - FIRST_RUN_TIMESTAMP))
+            DIFF_SECONDS=$((FIRST_RUN_TIMESTAMP - FIRST_RUN_TIMESTAMP))
             LIMIT_SECONDS=604800
 
             if [ $DIFF_SECONDS -gt $LIMIT_SECONDS ]; then
